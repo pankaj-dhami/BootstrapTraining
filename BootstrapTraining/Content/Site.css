@@ -1,7 +1,24 @@
 ﻿body {
-    padding-top: 80px;
+    /*padding-top: 80px;*/
     font-family: 'Open Sans',sans-serif;
 }
+
+/*html, body {
+    height: 100%;
+}
+
+header {
+    display: block;
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 100px 0;
+    min-height: 100%;
+    background: no-repeat center center;
+    background-attachment: scroll;
+    background-color: #222;
+    background-size: cover;
+}*/
 
 footer {
     background-color: #333;
@@ -93,7 +110,7 @@ article {
 
 .navbar {
     margin-bottom: 0;
-    padding: 30px 15px;
+    padding: 22px 15px;
     -webkit-trasition: all 0.5s;
     transition: all 0.5s;
 }
@@ -114,8 +131,17 @@ article {
 }
 
 .img-responsive {
-    border:3px solid grey;
-    box-shadow:rgba(0,0,0,0.5) 10px 10px 60px;
+    border: 3px solid grey;
+    box-shadow: rgba(0,0,0,0.5) 10px 10px 60px;
+}
+
+.fill-screen {
+    background-size: cover;
+    background-position: center;
+}
+
+.fixed-attachement {
+    background-attachment: fixed;
 }
 
 @media(max-width: 400px) {
@@ -132,4 +158,48 @@ article {
         margin: auto;
         width: 20%;
     }
+}
+
+
+.text-banner {
+    text-align: center;
+    margin: 40px 20px;
+}
+
+    .text-banner h1 {
+        font-size: 44px;
+    }
+
+    .text-banner p {
+        font-size: 18px;
+    }
+
+.activity-section {
+    margin: 50px;
+}
+
+.activity-element {
+    text-align: center;
+}
+
+    .activity-element img {
+        width: 150px;
+        height: 150px;
+    }
+
+.contact-us {
+    text-align: center;
+    margin: 50px;
+}
+
+
+.down-button {
+    position: absolute;
+    bottom: 40px;
+    width:100%;
+    text-align:center;
+}
+
+.down-button i {
+    color:white;
 }
