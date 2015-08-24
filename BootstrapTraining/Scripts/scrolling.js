@@ -1,5 +1,7 @@
 ﻿$(function () {
 
+    new WOW().init();
+
     $(window).on("load resize", function () {
 
         $(".fill-screen").css("height", window.innerHeight);
@@ -20,12 +22,12 @@
         offset: 0
     });
 
-    //$('nav a, .down-button a').bind("click", function (e) {
-    //    $("html, body").stop().animate({
-    //        scrollTop: $($(this).attr("href")).offset().top - 100
-    //    }, 1500, "easeInOutExpo");
-    //    e.preventDefault();
-    //});
+    $('nav a, .down-button a').bind("click", function (e) {
+        $("html, body").stop().animate({
+            scrollTop: $($(this).attr("href")).offset().top - 100
+        }, 1500, "easeInOutExpo");
+        e.preventDefault();
+    });
     //parallex scrolling
     $(window).stellar();
     var arr = ['#top', '#Sights', '#Sports', '#Activites', '#Contact']
@@ -34,11 +36,15 @@
         $("html, body").stop().animate({
             scrollTop: $(arr[index]).offset().top - 100
         }, 1500, "easeInOutExpo");
-
-        index++;
-
-        if (arr.length == index) {
+        if (index==arr.length) {
             index = 0;
         }
+        index++;
+
     });
+    function progress(percent, $element) {
+        var progressBarWidth = percent * $element.width() / 100;
+        $element.find('div').animate({ width: progressBarWidth }, 500).html(percent + "% ");
+    }
+
 });
