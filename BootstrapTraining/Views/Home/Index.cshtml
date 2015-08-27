@@ -39,7 +39,7 @@
             </div><!-- /.container-fluid -->
         </nav>
     </header>
-   
+
     <div class="container-fluid" style="margin-top:10px;">
 
         <section class="row wow fadeInDown">
@@ -85,7 +85,7 @@
             </div>
 
         </section>
-        <section id="Activites"  class="row stellar-bg wow fadeInDown" data-stellar-background-ratio="0.2">
+        <section id="Activites" class="row stellar-bg wow fadeInDown" data-stellar-background-ratio="0.2">
             <div class="fill-screen fixed-attachement" style="background-image: url(../../Images/4.jpg)"></div>
         </section>
         <section id="Contact" class="row contact-us">
@@ -96,14 +96,66 @@
             <p>ta distinctio. Nam libero tempore, cum soluta nobis est el </p>
             <p>ta distinctio. Nam libero tempore, cum soluta nobis est el </p>
         </section>
-       
+        <h3 id="yourHeaderID"></h3>
+        <p class="your-paragraph-class"></p>
+        <a id="yourAnchorID" href="#url"></a>
     </div>
     <footer class="container-fluid">
         <h1>footer</h1>
     </footer>
+
+    <ol id="chooseID">
+        @*/* data-id needs to be the same as the parent it will attach to */*@
+        <li data-id="newHeader">Tip content...</li>
+
+
+        <li>Tip content...</li>
+
+
+        <li data-class="parent-element-class" data-options="tipLocation:top;tipAnimation:fade" data-button="Second Button">Content...</li>
+
+
+        <li data-id="parentElementID" class="custom-class">Content...</li>
+    </ol>
 </body>
 </html>
+
 <script>
+    $(document).ready(function () {
+        //setTimeout(function () {
+        //    toastr.options = {
+        //        "closeButton": true,
+        //        "debug": false,
+        //        "newestOnTop": false,
+        //        "progressBar": true,
+        //        "positionClass": "toast-top-center",
+        //        "preventDuplicates": false,
+        //        "showDuration": "300",
+        //        "hideDuration": "1000",
+        //        "timeOut": "5000",
+        //        "extendedTimeOut": "1000",
+        //        "showEasing": "swing",
+        //        "hideEasing": "linear",
+        //        "showMethod": "fadeIn",
+        //        "hideMethod": "fadeOut"
+        //    }
+        //    toastr.success('My name is Inigo Montoya. You killed my father, prepare to die!', 'Turtle Bay Resort')
+        //}, 2000)
 
 
+    });
+
+    $(window).load(function () {
+
+        $('#chooseID').joyride({
+            autoStart: true,
+            postStepCallback: function (index, tip) {
+                if (index == 2) {
+                    $(this).joyride('set_li', false, 1);
+                }
+            },
+            modal: true,
+            expose: true
+        });
+    });
 </script>

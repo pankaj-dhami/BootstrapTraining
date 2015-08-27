@@ -8,17 +8,20 @@
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/modernizr.mq.js"></script>
     <link href="~/Content/jquery.fs.wallpaper.css" rel="stylesheet" />
     <link href="~/Content/font-awesome.css" rel="stylesheet" />
     <link href="~/Content/progressbar.css" rel="stylesheet" />
     <link href="~/Content/animate.css" rel="stylesheet" />
-
+    <link href="~/Content/toastr.css" rel="stylesheet" />
+    <link href="~/Content/joyride-2.1.css" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
 @RenderBody()
 
 @RenderSection("scripts", required: false)
-
+<script src="~/Scripts/jquery.joyride-2.1.js"></script>
+<script src="~/Scripts/toastr.js"></script>
 <script src="~/Scripts/progressbar.js"></script>
 <script src="~/Scripts/pace.min.js"></script>
 <script src="~/Scripts/cbpAnimatedHeader.js"></script>
@@ -28,4 +31,5 @@
 <script src="~/Scripts/wow.js"></script>
 <script src="~/Scripts/jquery.stellar.js"></script>
 <script src="~/Scripts/scrolling.js"></script>
+
 </html>
